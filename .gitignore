@@ -7,3 +7,7 @@
 
 # CMake local configuration options
 CMakeUserPresets.json
+
+# JetBrains IDEs
+.idea
+cmake-build-*
