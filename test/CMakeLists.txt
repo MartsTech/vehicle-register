@@ -1,26 +1,19 @@
 # Add a target for the unit tests
-add_executable(test_target)
+add_executable(test_target
+        registration_plate/registration_plate.cpp,
+        ucn/ucn.cpp,
+        vehicle_register/vehicle_register.cpp)
 
 target_link_libraries(
-	test_target
-	PRIVATE
-		Catch2::Catch2WithMain
-		mathlib
-)
-
-# Currently all .cpp files are listed here.
-# You may want to switch to a more flexible configuration if you work with a large number of packages/files
-target_sources(
-	test_target
-	PRIVATE
-		mathlib/factorial.cpp
-		mathlib/fibbonachi.cpp
+        test_target
+        PRIVATE
+        Catch2::Catch2WithMain,
 )
 
 target_include_directories(
-	test_target
-	PRIVATE
-		${CMAKE_SOURCE_DIR}/src
+        test_target
+        PRIVATE
+        ${CMAKE_SOURCE_DIR}
 )
 
 # Automatically register all tests
