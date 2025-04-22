@@ -1,7 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <limits> // За std::numeric_limits
+#include <limits>
 
 #ifdef _WIN32
 #include <windows.h>
